@@ -18,6 +18,9 @@
 			"app/tests/TestCase.php"
 		]
 	},
+        "psr-4": {
+                "LaravelTabor\\": "app/LaravelTabor"
+         },
 	"scripts": {
 		"post-install-cmd": [
 			"php artisan clear-compiled",
