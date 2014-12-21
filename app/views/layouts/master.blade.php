@@ -134,39 +134,7 @@
 </head>
 <body>
 <div id="wrapper">
-
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        Start Bootstrap
-                    </a>
-                </li>
-                <li>
-                    <a href="#">Dashboard</a>
-                </li>
-                <li>
-                    <a href="#">Shortcuts</a>
-                </li>
-                <li>
-                    <a href="#">Overview</a>
-                </li>
-                <li>
-                    <a href="#">Events</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
+    @include('layouts.menu.left-menu')
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
@@ -175,121 +143,126 @@
 
 
 
-                                <!-- Page Header -->
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <h1 class="page-header">Page Heading
-                                            <small>Secondary Text</small>
-                                        </h1>
-                                    </div>
-                                </div>
-                                <!-- /.row -->
+                                {{--<!-- Page Header -->--}}
+                                {{--<div class="row">--}}
+                                    {{--<div class="col-lg-12">--}}
+                                        {{--<h1 class="page-header">Page Heading--}}
+                                            {{--<small>Secondary Text</small>--}}
+                                        {{--</h1>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<!-- /.row -->--}}
 
-                                <!-- Projects Row -->
-                                <div class="row">
-                                    <div class="col-md-6 portfolio-item">
-                                        <a href="#">
-                                            <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                                        </a>
-                                        <h3>
-                                            <a href="#">Project One</a>
-                                        </h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                                    </div>
-                                    <div class="col-md-6 portfolio-item">
-                                        <a href="#">
-                                            <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                                        </a>
-                                        <h3>
-                                            <a href="#">Project Two</a>
-                                        </h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                                    </div>
-                                </div>
-                                <!-- /.row -->
+                                {{--<!-- Projects Row -->--}}
+                                {{--<div class="row">--}}
+                                    {{--<div class="col-md-6 portfolio-item">--}}
+                                        {{--<a href="#">--}}
+                                            {{--<img class="img-responsive" src="http://placehold.it/700x400" alt="">--}}
+                                        {{--</a>--}}
+                                        {{--<h3>--}}
+                                            {{--<a href="#">Project One</a>--}}
+                                        {{--</h3>--}}
+                                        {{--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="col-md-6 portfolio-item">--}}
+                                        {{--<a href="#">--}}
+                                            {{--<img class="img-responsive" src="http://placehold.it/700x400" alt="">--}}
+                                        {{--</a>--}}
+                                        {{--<h3>--}}
+                                            {{--<a href="#">Project Two</a>--}}
+                                        {{--</h3>--}}
+                                        {{--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<!-- /.row -->--}}
 
-                                <!-- Projects Row -->
-                                <div class="row">
-                                    <div class="col-md-6 portfolio-item">
-                                        <a href="#">
-                                            <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                                        </a>
-                                        <h3>
-                                            <a href="#">Project Three</a>
-                                        </h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                                    </div>
-                                    <div class="col-md-6 portfolio-item">
-                                        <a href="#">
-                                            <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                                        </a>
-                                        <h3>
-                                            <a href="#">Project Four</a>
-                                        </h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                                    </div>
-                                </div>
-                                <!-- /.row -->
+                                {{--<!-- Projects Row -->--}}
+                                {{--<div class="row">--}}
+                                    {{--<div class="col-md-6 portfolio-item">--}}
+                                        {{--<a href="#">--}}
+                                            {{--<img class="img-responsive" src="http://placehold.it/700x400" alt="">--}}
+                                        {{--</a>--}}
+                                        {{--<h3>--}}
+                                            {{--<a href="#">Project Three</a>--}}
+                                        {{--</h3>--}}
+                                        {{--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="col-md-6 portfolio-item">--}}
+                                        {{--<a href="#">--}}
+                                            {{--<img class="img-responsive" src="http://placehold.it/700x400" alt="">--}}
+                                        {{--</a>--}}
+                                        {{--<h3>--}}
+                                            {{--<a href="#">Project Four</a>--}}
+                                        {{--</h3>--}}
+                                        {{--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<!-- /.row -->--}}
 
-                                <!-- Projects Row -->
-                                <div class="row">
-                                    <div class="col-md-6 portfolio-item">
-                                        <a href="#">
-                                            <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                                        </a>
-                                        <h3>
-                                            <a href="#">Project Five</a>
-                                        </h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                                    </div>
-                                    <div class="col-md-6 portfolio-item">
-                                        <a href="#">
-                                            <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                                        </a>
-                                        <h3>
-                                            <a href="#">Project Six</a>
-                                        </h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                                    </div>
-                                </div>
-                                <!-- /.row -->
+                                {{--<!-- Projects Row -->--}}
+                                {{--<div class="row">--}}
+                                    {{--<div class="col-md-6 portfolio-item">--}}
+                                        {{--<a href="#">--}}
+                                            {{--<img class="img-responsive" src="http://placehold.it/700x400" alt="">--}}
+                                        {{--</a>--}}
+                                        {{--<h3>--}}
+                                            {{--<a href="#">Project Five</a>--}}
+                                        {{--</h3>--}}
+                                        {{--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="col-md-6 portfolio-item">--}}
+                                        {{--<a href="#">--}}
+                                            {{--<img class="img-responsive" src="http://placehold.it/700x400" alt="">--}}
+                                        {{--</a>--}}
+                                        {{--<h3>--}}
+                                            {{--<a href="#">Project Six</a>--}}
+                                        {{--</h3>--}}
+                                        {{--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<!-- /.row -->--}}
 
-                                <hr>
+                                {{--<hr>--}}
 
-                                <!-- Pagination -->
-                                <div class="row text-center">
-                                    <div class="col-lg-12">
-                                        <ul class="pagination">
-                                            <li>
-                                                <a href="#">«</a>
-                                            </li>
-                                            <li class="active">
-                                                <a href="#">1</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">2</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">3</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">4</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">5</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">»</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- /.row -->
+                                {{--<!-- Pagination -->--}}
+                                {{--<div class="row text-center">--}}
+                                    {{--<div class="col-lg-12">--}}
+                                        {{--<ul class="pagination">--}}
+                                            {{--<li>--}}
+                                                {{--<a href="#">«</a>--}}
+                                            {{--</li>--}}
+                                            {{--<li class="active">--}}
+                                                {{--<a href="#">1</a>--}}
+                                            {{--</li>--}}
+                                            {{--<li>--}}
+                                                {{--<a href="#">2</a>--}}
+                                            {{--</li>--}}
+                                            {{--<li>--}}
+                                                {{--<a href="#">3</a>--}}
+                                            {{--</li>--}}
+                                            {{--<li>--}}
+                                                {{--<a href="#">4</a>--}}
+                                            {{--</li>--}}
+                                            {{--<li>--}}
+                                                {{--<a href="#">5</a>--}}
+                                            {{--</li>--}}
+                                            {{--<li>--}}
+                                                {{--<a href="#">»</a>--}}
+                                            {{--</li>--}}
+                                        {{--</ul>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<!-- /.row -->--}}
 
 
-                        <h1>Simple Sidebar</h1>
+                        {{--<h1>Simple Sidebar</h1>--}}
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></a>
+
+                         @if(Session::has('message'))
+                                 <p class="alert alert-success">{{ Lang::get('messages.'.Session::get('message')) }}</p>
+                             @endif
                         @yield('content')
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+
                     </div>
 
         </div>
@@ -297,11 +270,6 @@
 
     </div>
     <!-- /#wrapper -->
-
-
-            <div class="container">
-                    @yield('content')
-                </div>
 
 
  <!-- Menu Toggle Script -->

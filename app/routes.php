@@ -15,3 +15,5 @@ Route::get('/', function()
 {
 	return View::make('dashboard.index');
 });
+
+Route::resource('vehicle', 'VehiclesController');
