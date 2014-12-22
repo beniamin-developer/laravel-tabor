@@ -8,3 +8,4 @@ composer.lock
 Thumbs.db
 lamp-laravel.box
 .idea
+.vagrant

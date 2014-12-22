@@ -1,6 +1,7 @@
 <?php
 
 use LaravelTabor\Repositories\VehicleRepositoryInterface;
+use LaravelTabor\Repositories\VersioningVehicleRepositoryInterface;
 
 class VehiclesController extends \BaseController {
 
@@ -14,10 +15,20 @@ class VehiclesController extends \BaseController {
      */
     private $vehicle;
 
-    public function __construct(VehicleRepositoryInterface $vehicleRepository, Vehicle $vehicle)
+	/**
+	 * @var VersioningVehicleRepositoryInterface
+	 */
+	private $versioningVehicleRepository;
+
+    public function __construct(
+		VehicleRepositoryInterface $vehicleRepository,
+		Vehicle $vehicle,
+		VersioningVehicleRepositoryInterface $versioningVehicleRepository
+	)
     {
         $this->vehicleRepository = $vehicleRepository;
         $this->vehicle = $vehicle;
+		$this->versioningVehicleRepository = $versioningVehicleRepository;
     }
 
 	/**
@@ -86,7 +97,10 @@ class VehiclesController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$vehicle = $this->vehicleRepository->find($id);
+		$versioningVehicles = $this->versioningVehicleRepository->find($id);
+
+		return View::make('vehicles.edit')->with('vehicle', $vehicle)->with('versioningVehicles', $versioningVehicles);
 	}
 
 
@@ -98,7 +112,9 @@ class VehiclesController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$this->vehicleRepository->update($id, Input::all());
+
+		return Redirect::route('vehicle.index')->with('message', 'Zedytowano pojazd');
 	}
 
 

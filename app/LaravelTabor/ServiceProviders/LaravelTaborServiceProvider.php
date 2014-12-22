@@ -1,7 +1,6 @@
 <?php namespace LaravelTabor\ServiceProviders;
 
 use Illuminate\Support\ServiceProvider;
-//use LaravelTabor\Repositories\Eloquent\VehicleRepository;
 
 class LaravelTaborServiceProvider extends ServiceProvider {
 
@@ -11,6 +10,10 @@ class LaravelTaborServiceProvider extends ServiceProvider {
             'LaravelTabor\Repositories\VehicleRepositoryInterface',
             'LaravelTabor\Repositories\Eloquent\VehicleRepository'
         );
-    }
 
+        $this->app->bind(
+            'LaravelTabor\Repositories\VersioningVehicleRepositoryInterface',
+            'LaravelTabor\Repositories\Eloquent\VersioningVehicleRepository'
+        );
+    }
 }

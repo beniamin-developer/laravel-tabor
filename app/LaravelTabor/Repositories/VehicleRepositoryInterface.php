@@ -3,9 +3,9 @@
 interface VehicleRepositoryInterface {
     public function all();
 
-    public function getById($id);
-
-    public function getByIdWithOilChange($id);
+    public function find($id);
 
     public function create($data);
+
+    public function update($id, $data);
 }
