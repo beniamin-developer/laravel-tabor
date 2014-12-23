@@ -67,4 +67,9 @@ class VehicleRepository implements VehicleRepositoryInterface {
         $item->name = $data['name'];
         $item->save($data);
     }
+
+    public function destroy($id)
+    {
+        $this->model->where('id', $id)->delete();
+    }
 }

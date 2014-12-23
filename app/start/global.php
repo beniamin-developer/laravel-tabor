@@ -79,3 +79,20 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+Form::macro('date', function($name, $default = NULL, $attrs = array())
+{
+    $item = '<input type="date" name="'. $name .'" ';
+
+    if ($default) {
+        $item .= 'value="'. $default .'" ';
+    }
+
+    if (is_array($attrs)) {
+        foreach ($attrs as $a => $v)
+            $item .= $a .'="'. $v .'" ';
+    }
+    $item .= ">";
+
+    return $item;
+});

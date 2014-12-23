@@ -19,7 +19,7 @@ class CreateVersioningVehicleTable extends Migration {
             $table->string('registration_number', 7);
             $table->integer('engine_capacity');
             $table->integer('mileage_counter');
-            $table->integer('vehicle_id')->unsigned();
+            $table->integer('vehicle_id')->unsigned()->nullable();
             $table->foreign('vehicle_id')->references('id')->on('vehicles');
 			$table->timestamps();
 		});

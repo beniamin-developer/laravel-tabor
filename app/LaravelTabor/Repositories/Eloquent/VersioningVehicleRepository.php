@@ -23,4 +23,9 @@ class VersioningVehicleRepository implements VersioningVehicleRepositoryInterfac
         $versioning = $this->model->create($data);
         $versioning->Vehicle()->associate($item)->save();
     }
+
+    public function destroy($id)
+    {
+        $this->model->where('vehicle_id', $id)->delete();
+    }
 }

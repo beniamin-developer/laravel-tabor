@@ -6,4 +6,5 @@ return array(
     'engine_capacity' => 'Pojemność silnika',
     'mileage_counter' => 'Przebieg',
     'save' => 'Zapisz',
+    'last_oil_change' => 'Data ostatniej wymiany oleju',
 );

@@ -33,6 +33,14 @@
 
 <div class="row">
     <div class="form-group col-xs-4">
+        {{ Form::label(Lang::get('vehicle.last_oil_change')) }}
+        {{ Form::date('last_oil_change', null, array('class' => 'form-control')) }}
+        {{ $errors->first('last_oil_change') }}
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group col-xs-4">
         {{ Form::submit(Lang::get('vehicle.save'), array('class' => 'btn btn-primary btn-sm')) }}
     </div>
 </div>

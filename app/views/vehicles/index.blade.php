@@ -13,7 +13,7 @@
                     <th>{{ Lang::get('vehicle.registration_number') }}</th>
                     <th>{{ Lang::get('vehicle.engine_capacity') }}</th>
                     <th>{{ Lang::get('vehicle.mileage_counter') }}</th>
-                    <th width="70"></th>
+                    <th></th>
                 </thead>
 
                 @foreach($vehicles as $vehicle)
@@ -22,7 +22,12 @@
                     <td>{{ $vehicle->registration_number }}</td>
                     <td>{{ $vehicle->engine_capacity }}</td>
                     <td>{{ $vehicle->mileage_counter }}</td>
-                    <td>{{ HTML::linkRoute('vehicle.edit', Lang::get('action.edit'), array($vehicle->id), array('class' => 'btn btn-primary btn-sm')) }}</td>
+                    <td>
+                        {{ HTML::linkRoute('vehicle.edit', Lang::get('action.edit'), array($vehicle->id), array('class' => 'btn btn-primary btn-sm')) }}
+                        {{ Form::open(['route' => ['vehicle.destroy', $vehicle->id], 'method' => 'delete']) }}
+                            {{ Form::submit(Lang::get('vehicle.destroy'), array('class' => 'btn btn-primary btn-sm')) }}
+                        {{ Form::close() }}
+                    </td>
                 </tbody>
                 @endforeach
             </table>

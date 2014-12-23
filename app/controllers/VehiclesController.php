@@ -85,7 +85,7 @@ class VehiclesController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+        // delete
 	}
 
 
@@ -112,6 +112,7 @@ class VehiclesController extends \BaseController {
 	 */
 	public function update($id)
 	{
+        dd(Input::all());
 		$this->vehicleRepository->update($id, Input::all());
 
 		return Redirect::route('vehicle.index')->with('message', 'Zedytowano pojazd');
@@ -125,8 +126,12 @@ class VehiclesController extends \BaseController {
 	 * @return Response
 	 */
 	public function destroy($id)
-	{
-		//
+    {
+        $this->versioningVehicleRepository->destroy($id);
+
+        $this->vehicleRepository->destroy($id);
+
+        return Redirect::route('vehicle.index');
 	}
 
 

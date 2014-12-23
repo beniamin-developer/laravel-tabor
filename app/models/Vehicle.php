@@ -15,5 +15,6 @@ class Vehicle extends \Eloquent {
         'registration_number' => 'required|unique:vehicles,registration_number',
         'engine_capacity' => 'required|integer',
         'mileage_counter' => 'required|integer',
+        'last_oil_change' =>'required',
     ];
 }

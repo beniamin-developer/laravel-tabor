@@ -7,7 +7,7 @@
             </a>
         </li>
         <li>
-            <a href="#">{{ Lang::get('menu.vehicles') }}</a>
+            {{ HTML::linkRoute('vehicle.index', Lang::get('menu.vehicles')) }}
         </li>
     </ul>
 </div>

@@ -17,7 +17,7 @@ class CreateOilChangesTable extends Migration {
 			$table->increments('id');
             $table->date('last_oil_change');
             $table->integer('vehicle_id')->unsigned();
-            $table->foreign('vehicle_id')->references('id')->on('vehicles');
+            $table->foreign('vehicle_id')->references('id')->on('vehicles')->onDelete('cascade');;
 			$table->timestamps();
 		});
 	}

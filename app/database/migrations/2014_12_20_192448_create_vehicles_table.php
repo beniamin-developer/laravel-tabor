@@ -19,6 +19,7 @@ class CreateVehiclesTable extends Migration {
             $table->string('registration_number', 7);
             $table->integer('engine_capacity');
             $table->integer('mileage_counter');
+            $table->date('last_oil_change');
 			$table->timestamps();
 		});
 	}
