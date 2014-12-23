@@ -1,5 +1,5 @@
 laravel-tabor
 =============
-##Application use bower.
-##Installation bower npm install -g bower
+<p>Application use bower.</p>
+<p>Installation bower npm install -g bower</p>
 ##Installation bower components bower install
