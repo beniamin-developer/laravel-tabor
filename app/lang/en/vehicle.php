@@ -7,4 +7,6 @@ return array(
     'mileage_counter' => 'Mileage counter',
     'save' => 'Save',
     'last_oil_change' => 'Date last oil hange',
+    'history_vehicle' => 'History vehicle',
+    'edit_vehicle' => 'Edit vehicle'
 );

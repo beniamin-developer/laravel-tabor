@@ -54,6 +54,7 @@ return array(
     ),
     "not_in"         => "Zaznaczona opcja :attribute jest nieprawidłowa.",
     "numeric"        => ":attribute musi być numeryczne.",
+    "regex"          => "Pole :attribute ma nieprawidłowy format.",
     "required"       => "Pole :attribute jest wymagane.",
     "same"           => ":attribute i :other muszą być takie same.",
     "size"           => array(

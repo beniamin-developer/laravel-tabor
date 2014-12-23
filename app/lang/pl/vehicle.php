@@ -7,4 +7,6 @@ return array(
     'mileage_counter' => 'Przebieg',
     'save' => 'Zapisz',
     'last_oil_change' => 'Data ostatniej wymiany oleju',
+    'history_vehicle' => 'Historia pojazdu',
+    'edit_vehicle' => 'Edycja pojazdu'
 );

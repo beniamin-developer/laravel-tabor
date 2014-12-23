@@ -65,7 +65,7 @@ class VehiclesController extends \BaseController {
 	{
         $data = Input::all();
 
-        $validator = Validator::make(Input::all(), $this->vehicle->rules);
+        $validator = Validator::make($data, $this->vehicle->rules);
 
         if($validator->fails()) {
             return Redirect::route('vehicle.create')->withErrors($validator)->withInput();
@@ -112,8 +112,15 @@ class VehiclesController extends \BaseController {
 	 */
 	public function update($id)
 	{
-        dd(Input::all());
-		$this->vehicleRepository->update($id, Input::all());
+		$data = Input::all();
+
+		$validator = Validator::make($data, $this->vehicle->rules);
+
+		if($validator->fails()) {
+			return Redirect::route('vehicle.edit', array('id' => $id))->withErrors($validator)->withInput();
+		}
+
+		$this->vehicleRepository->update($id, $data);
 
 		return Redirect::route('vehicle.index')->with('message', 'Zedytowano pojazd');
 	}

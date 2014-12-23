@@ -34,8 +34,13 @@
 <div class="row">
     <div class="form-group col-xs-4">
         {{ Form::label(Lang::get('vehicle.last_oil_change')) }}
-        {{ Form::date('last_oil_change', '10.10.2014', array('class' => 'form-control')) }}
-        {{ $errors->first('last_oil_change') }}
+        <div class='input-group date' id='datetimepicker1'>
+            {{ Form::text('last_oil_change', null, array('class' => 'form-control')) }}
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+            {{ $errors->first('last_oil_change') }}
+        </div>
     </div>
 </div>
 
@@ -45,3 +50,14 @@
     </div>
 </div>
 {{ Form::close() }}
+
+<script type="text/javascript">
+    $(function () {
+        $('input[name="last_oil_change"]').datepicker({
+            format: "yyyy-mm-dd",
+            weekStart: 1,
+            language: "pl",
+            todayHighlight: true
+        });
+    });
+</script>

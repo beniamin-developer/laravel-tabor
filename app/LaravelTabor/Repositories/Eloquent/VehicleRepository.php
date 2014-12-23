@@ -65,6 +65,10 @@ class VehicleRepository implements VehicleRepositoryInterface {
          * Save edit row
          */
         $item->name = $data['name'];
+        $item->registration_number = $data['registration_number'];
+        $item->engine_capacity = $data['engine_capacity'];
+        $item->mileage_counter = $data['mileage_counter'];
+        $item->last_oil_change = $data['last_oil_change'];
         $item->save($data);
     }
 

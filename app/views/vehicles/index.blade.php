@@ -23,9 +23,9 @@
                     <td>{{ $vehicle->engine_capacity }}</td>
                     <td>{{ $vehicle->mileage_counter }}</td>
                     <td>
-                        {{ HTML::linkRoute('vehicle.edit', Lang::get('action.edit'), array($vehicle->id), array('class' => 'btn btn-primary btn-sm')) }}
+                        {{ HTML::linkRoute('vehicle.edit', Lang::get('action.edit'), array($vehicle->id), array('class' => 'btn-edit btn btn-primary btn-sm pull-left')) }}
                         {{ Form::open(['route' => ['vehicle.destroy', $vehicle->id], 'method' => 'delete']) }}
-                            {{ Form::submit(Lang::get('vehicle.destroy'), array('class' => 'btn btn-primary btn-sm')) }}
+                            {{ Form::submit(Lang::get('action.destroy'), array('class' => 'btn btn-primary btn-sm')) }}
                         {{ Form::close() }}
                     </td>
                 </tbody>
