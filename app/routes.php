@@ -17,3 +17,5 @@ Route::get('/', function()
 });
 
 Route::resource('vehicle', 'VehiclesController');
+
+Route::resource('cart', 'CartController');

@@ -9,6 +9,10 @@
         <li>
             {{ HTML::linkRoute('vehicle.index', Lang::get('menu.vehicles')) }}
         </li>
+
+        <li>
+            {{ HTML::linkRoute('cart.show', Lang::get('menu.cart')) }}
+        </li>
     </ul>
 </div>
 <!-- /#sidebar-wrapper -->
